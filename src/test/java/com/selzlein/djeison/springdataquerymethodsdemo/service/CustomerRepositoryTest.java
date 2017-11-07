@@ -29,8 +29,8 @@ public class CustomerRepositoryTest {
 	}
 
 	@Test
-	public void shouldFindByBirthday() {
-		assertThat(customerRepository.findByBirthday(LocalDate.of(1985, 5, 5)), hasSize(1));
+	public void shouldFindByBirthdayBetween() {
+		assertThat(customerRepository.findByBirthdayBetween(LocalDate.of(1980, 1, 1),LocalDate.of(1986, 1, 1)), hasSize(2));
 	}
 
 	@Test

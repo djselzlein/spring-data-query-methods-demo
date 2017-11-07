@@ -12,7 +12,7 @@ import com.selzlein.djeison.springdataquerymethodsdemo.model.Customer;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-	Set<Customer> findByBirthday(LocalDate birthday);
+	Set<Customer> findByBirthdayBetween(LocalDate startDate, LocalDate endDate);
 
 	Set<Customer> findByAddress_ZipCode(String zipCode);
 

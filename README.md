@@ -24,6 +24,8 @@ By following this strategy, Spring Data will generate implementation for these m
 
 Check [tests in this project](https://github.com/selzlein/spring-data-query-methods-demo/tree/master/src/test/java/com/selzlein/djeison/springdataquerymethodsdemo/service) for a better comprehension.
 
+See [this blog post](https://selzlein.github.io/2017/11/08/spring-data-query-methods-by-name/) for a complete guidance on implementing Spring Data Query Methods.
+
 See [Spring Data documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details) for further details.
 
 ## Run

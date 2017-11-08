@@ -12,6 +12,8 @@ import com.selzlein.djeison.springdataquerymethodsdemo.model.Address;
 public interface AddressRepository extends JpaRepository<Address, Long> {
 
 	Set<Address> findByZipCode(String zipCode);
+	
+	Address findFirstByStreet(String street);
 
 	Set<Address> findByStreetIgnoreCaseContaining(String street);
 	

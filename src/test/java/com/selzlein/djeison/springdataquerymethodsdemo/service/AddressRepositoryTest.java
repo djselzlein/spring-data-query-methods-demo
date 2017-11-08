@@ -2,6 +2,7 @@ package com.selzlein.djeison.springdataquerymethodsdemo.service;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
@@ -30,6 +31,13 @@ public class AddressRepositoryTest {
 	@Test
 	public void shouldFindByZipCode() {
 		assertThat(addressRepository.findByZipCode("11111"), hasSize(1));
+	}
+	
+	@Test
+	public void shouldFindFirstByStreet() {
+		Address address = addressRepository.findFirstByStreet("1st Street");
+		assertNotNull(address);
+		assertThat(address.getId(), equalTo(2L));
 	}
 	
 	@Test

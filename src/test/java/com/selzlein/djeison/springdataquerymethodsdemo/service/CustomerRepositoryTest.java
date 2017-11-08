@@ -1,11 +1,14 @@
 package com.selzlein.djeison.springdataquerymethodsdemo.service;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.Matchers.hasSize;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
 import java.util.Set;
-
-import static org.hamcrest.Matchers.*;
+import java.util.stream.Stream;
 
 import org.hibernate.Hibernate;
 import org.junit.Test;
@@ -30,7 +33,28 @@ public class CustomerRepositoryTest {
 
 	@Test
 	public void shouldFindByBirthdayBetween() {
-		assertThat(customerRepository.findByBirthdayBetween(LocalDate.of(1980, 1, 1),LocalDate.of(1986, 1, 1)), hasSize(2));
+		assertThat(customerRepository.findByBirthdayBetween(LocalDate.of(1980, 1, 1), LocalDate.of(1986, 1, 1)),
+				hasSize(2));
+	}
+
+	@Test
+	public void shouldFindByFirstNameAndLastName() {
+		assertThat(customerRepository.findByFirstNameAndLastName("John", "Doe"), hasSize(1));
+	}
+
+	@Test
+	public void shouldFindFirst2ByLastName() {
+		assertThat(customerRepository.findFirst2ByLastName("Doe"), hasSize(2));
+	}
+
+	@Test
+	public void shouldStreamAllByLastNameNotNull() {
+		try (Stream<Customer> customers = customerRepository.readAllByLastNameNotNull()) {
+			customers.forEach(customer -> {
+				assertNotNull(customer);
+				assertNotNull(customer.getId());
+			});
+		}
 	}
 
 	@Test

@@ -1,5 +1,7 @@
 # Spring Data Query Methods Demo
 
+[![Build Status](https://img.shields.io/travis/selzlein/spring-data-query-methods-demo.svg?style=flat-square)](https://travis-ci.org/selzlein/spring-data-query-methods-demo)
+
 Use Spring Data to generate database query methods by method names.
 
 ## What for?

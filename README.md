@@ -1,6 +1,6 @@
 # Spring Data Query Methods Demo
 
-[![Build Status](https://img.shields.io/travis/selzlein/spring-data-query-methods-demo.svg?style=flat-square)](https://travis-ci.org/selzlein/spring-data-query-methods-demo)
+[![Build Status](https://img.shields.io/travis/djselzlein/spring-data-query-methods-demo.svg?style=flat-square)](https://travis-ci.org/djselzlein/spring-data-query-methods-demo)
 
 Use Spring Data to generate database query methods by method names.
 
@@ -24,9 +24,9 @@ In your interface you can add method signatures following Spring Data Query Meth
 
 By following this strategy, Spring Data will generate implementation for these methods and you will be able to use them without having to write a single [JPQL](https://docs.oracle.com/html/E13946_01/ejb3_langref.html) (Java Persistence Query Language) line nor the worst case, native [SQL](https://www.w3schools.com/sql/).
 
-Check [tests in this project](https://github.com/selzlein/spring-data-query-methods-demo/tree/master/src/test/java/com/selzlein/djeison/springdataquerymethodsdemo/service) for a better comprehension.
+Check [tests in this project](https://github.com/djselzlein/spring-data-query-methods-demo/tree/master/src/test/java/com/selzlein/djeison/springdataquerymethodsdemo/service) for a better comprehension.
 
-See [this blog post](https://selzlein.github.io/2017/11/08/spring-data-query-methods-by-name/) for a complete guidance on implementing Spring Data Query Methods.
+See [this blog post](https://djselzlein.github.io/2017/11/08/spring-data-query-methods-by-name/) for a complete guidance on implementing Spring Data Query Methods.
 
 See [Spring Data documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details) for further details.
 
